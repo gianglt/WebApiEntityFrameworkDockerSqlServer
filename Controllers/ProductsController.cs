@@ -15,7 +15,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult Get(int take = 10, int skip = 0)
+    public ActionResult Get(int take = 20, int skip = 0)
     {
         return Ok(_salesContext.Products.OrderBy(p => p.ProductId).Skip(skip).Take(take));
     }
